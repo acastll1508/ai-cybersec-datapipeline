@@ -31,7 +31,9 @@ Especializarse en la aplicación de técnicas de Ciencia de Datos y Machine Lear
 
 ## Ruta Profesional de Proyectos
 
+
 | Projecto | Nombre | Enfoque | 
+| -------- | ------ | ------- |
 | 1 | Análisis de logs de ataques | Datos + Seguridad |
 | 2 | Detección de URL maliciosas con ML | IA para seguridad |
 | 3 | Automatización de Reconocimiento Ofensivo | Red Team | 
