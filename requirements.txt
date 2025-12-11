@@ -1,0 +1,2 @@
+# Minimun dependencies that will be documented as each project progresses
+# Dependencias mínimas que serán documentadas al avanzar cada proyecto

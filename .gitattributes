@@ -1,0 +1,77 @@
+##################################################################################
+# GLOBAL STANDARDIZATION OF LINE BREAKS  / NORMALIZACION GLOBAL DE SALTOS DE LÍNEA
+##################################################################################
+
+
+# All text files will be converted to LF  / Todo archivo de texto será convertido a LF
+* text=auto eol=lf
+
+
+
+###########################################
+# PYTHON, IA, DATA SCIENCE
+###########################################
+
+
+*.py      text eol=lf
+*.ipynb  -text
+*.csv     text eol=lf
+*.tsv     text eol=lf
+*.json    text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+
+
+
+###########################################
+# CYBERSECURITY/ CIBERSEGURIDAD/ SCRIPTS
+###########################################
+
+
+
+*.sh      text eol=lf
+*.ps1     text eol=lf
+*.conf    text eol=lf
+*.log     text eol=lf
+*.txt     text eol=lf
+
+
+
+###########################################
+# FRONTEND 
+###########################################
+
+
+
+*.html    text eol=lf
+*.css     text eol=lf
+*.js      text eol=lf
+
+
+
+###########################################
+# BINARY FILES / ARCHIVOS BINARIOS 
+###########################################
+
+
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.pdf   binary
+*.zip   binary
+*.exe   binary
+*.pkl   binary
+*.h5    binary
+*.onnx  binary
+
+
+############################################
+# BIG DATASETS / DATASETS GRANDES
+############################################
+
+
+data/**  -text
+datasets/**   -text
+
