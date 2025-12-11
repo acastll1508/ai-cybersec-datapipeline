@@ -1,4 +1,4 @@
- # AI & Data Analytics for Offensive Cybersecurity
+# AI & Data Analytics for Offensive Cybersecurity
 
  This repository is a professional hands-on laboratory focused in the application of:
 
