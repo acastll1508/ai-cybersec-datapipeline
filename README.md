@@ -1,6 +1,8 @@
 # AI & Data Analytics for Offensive Cybersecurity
+Leer esto en ingles → [README.md](README.md)
 
- This repository is a professional hands-on laboratory focused in the application of:
+
+This repository is a professional hands-on laboratory focused in the application of:
 
 - Artificial Intelligence
 - Data Analytics
