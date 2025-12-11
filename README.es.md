@@ -1,5 +1,5 @@
 # Inteligencia Artificial y Análisis de Datos para Ciberseguridad Ofensiva
-Read this in Spanish → [README.es.md](README.es.md)
+Lee esto en ingles → [README.md](README.md)
 
 
 Este respositorio es un laboratorio profesional enfocado en la aplicación de:
