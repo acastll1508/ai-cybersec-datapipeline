@@ -66,6 +66,14 @@ Especializarse en la aplicación de técnicas de Ciencia de Datos y Machine Lear
 
 ---
 
+## Requisitos
+
+- Python **>= 3.11.8**
+- pip
+- Virtualenv / venv
+- Git
+
+
 ## Estructura General del Repositorio
 
 - docs/ -> Documentación conceptual

@@ -66,6 +66,15 @@ To specialize in the application of Machine Learning and Data Science techniques
 
 ---
 
+## Requirements
+
+- Python **>= 3.11.8**
+- pip 
+- Virtualenv / venv
+- Git
+
+---
+
 ## High-Level Repository Structure
 
 - docs/ ->  Conceptual and methodological documentation
@@ -95,4 +104,3 @@ Electronic Engineer transitioning into:
 - Offensive & Defensive Cybersecurity 
 
 
-# test
