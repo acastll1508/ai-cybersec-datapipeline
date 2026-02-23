@@ -1,0 +1,14 @@
+[project]
+name = "project1-log-analysis"
+version = "0.1.0"
+description = "Cyberattack log analysis using Python and data analytics"
+requires-python = ">=3.11.8"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options] 
+testpaths = ["tests"]
+pythonpath = ["."]
+
+
