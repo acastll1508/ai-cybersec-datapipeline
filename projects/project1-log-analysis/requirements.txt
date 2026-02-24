@@ -1,0 +1,3 @@
+pandas
+jupyter
+pytest>=8.0

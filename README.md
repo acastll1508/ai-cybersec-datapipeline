@@ -8,7 +8,7 @@ This repository is a professional hands-on laboratory focused in the application
 - Data Analytics
 - Offensive Cybersecurity Automation
 
-All applied to real-world cyberattack data, malicious infraestructure detection and network traffic classification.
+Applied to **realistic cyberattack log simulations**, malicious infraestructure detection, and network traffic classification using publicly available security datasets.
 
 This project is designed as a portfolio-oriented path to transition into roles such as:
 
@@ -25,7 +25,7 @@ To specialize in the application of Machine Learning and Data Science techniques
 
 - Cyberattack detection
 - Threat intelligence   
-- Offensive security automotion 
+- Offensive security automation 
 - Network traffic classification
 - Cybercrime pattern analysis
 
@@ -35,10 +35,10 @@ To specialize in the application of Machine Learning and Data Science techniques
 
 | Project | Name | Focus |
 |--------|------|-------|
-| 1 | Cyberattack Log Analysis | Data + Security |
+| 1 | Cyberattack Log Analysis | Data + Security (Log parsing & visualization) |
 | 2 | Malicious URL Detection with ML | AI for Security |
-| 3 | Offensive Recon Automation | Red Team |
-| 4 | Network Traffic Classification | ML + Intrusion Detection |
+| 3 | Offensive Recon Automation | Red Team Automation |
+| 4 | Network Traffic Classification | ML + Intrusion Detection (public datasets) |
 
 ---
 
@@ -49,7 +49,7 @@ To specialize in the application of Machine Learning and Data Science techniques
 - Data Visualization 
 - Machine Learning for Threat Detection 
 - Offensive Automation
-- Real Security Datasets
+- Security Log Parsing
 - Ethical Hacking Foundations
 
 ---
@@ -66,17 +66,42 @@ To specialize in the application of Machine Learning and Data Science techniques
 
 ---
 
+## Requirements
+
+- Python **>= 3.11.8**
+- pip 
+- Virtualenv / venv
+- Git
+
+---
+
 ## High-Level Repository Structure
 
-- docs/ ->  Conceptual and methodological documentation
-- projects/ -> Real project code 
-- shared/ -> Reusable utilities
+- `docs/` ->  Conceptual and methodological documentation
+- `projects/` -> Self-contained project implementations 
+- `shared/` -> Reusable utilities (if applicable)
+
+---
+
+## How to run projects 
+
+This repository is organized as a **monorepo** containing multiple
+independent and self-contained projects.
+
+Each project must be executed from its own directory inside the 
+`projects/` folder.
+
+### Example: Project 1 - Cyberattack Log Analysis 
+
+`` bash 
+cd projects/project1-log-analysis 
+python -m src.load_data
 
 ---
 
 ## Ethical & Legal Disclaimer 
 
-All techniques presented in this repository are intended estrictly for:
+All techniques presented in this repository are intended strictly for:
 
 - Educational purposes 
 - Research 

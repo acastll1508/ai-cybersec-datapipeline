@@ -2,15 +2,15 @@
 Lee esto en ingles → [README.md](README.md)
 
 
-Este respositorio es un laboratorio profesional enfocado en la aplicación de:
+Este respositorio es un laboratorio práctico profesional enfocado en la aplicación de:
 
 - Inteligencia Aritificial 
 - Análisis de Datos
 - Automatización Ofensiva en Ciberseguridad
 
-Todo aplicado a datos reales de ciberataques, detección de infraestructura maliciosa y clasificación de tráfico de red.
+Aplicado a **simulaciones realistas de logs de ciberataques**, detección de infraestructura maliciosa y clasificación de tráfico de red uttilizando datasets públicos de seguridad.
 
-Este laboratorio esta diseñado como un portafolio profesional para perfiles como:
+Este laboratorio esta diseñado como un portafolio profesional para transicionar hacia roles como:
 
 - Analista de AI en Ciberseguridad
 - Analista de Datos en Seguridad 
@@ -21,7 +21,7 @@ Este laboratorio esta diseñado como un portafolio profesional para perfiles com
 
 ## Objetivo Profesional
 
-Especializarse en la aplicación de técnicas de Ciencia de Datos y Machine Learning para:
+Especializarme en la aplicación de técnicas de Ciencia de Datos y Machine Learning para:
 
 - Detección de Ciberataques
 - Inteligencia de amenazas
@@ -31,46 +31,70 @@ Especializarse en la aplicación de técnicas de Ciencia de Datos y Machine Lear
 
 ---
 
-## Ruta Profesional de Proyectos
+## Ruta del Proyecto Profesional
 
 | Proyecto | Nombre | Enfoque | 
 |--------|------|------|
-| 1 | Análisis de logs de ataques | Datos + Seguridad |
-| 2 | Detección de URL maliciosas con ML | IA para seguridad |
+| 1 | Análisis de Logs de Ciberataques | Datos + Seguridad (Parsing y visualización) |
+| 2 | Detección de URLs maliciosas con ML | IA aplicada a Seguridad |
 | 3 | Automatización de Reconocimiento Ofensivo | Red Team | 
-| 4 | Clasificación de Trafico de Red | ML + Intrusiones | 
+| 4 | Clasificación de Tráfico de Red | ML + Detección de Intrusiones (datasets públicos) | 
 
 ---
 
 ## Competencias Clave
 
-- Python para Ciberseguridad
+- Python aplicado a Ciberseguridad
 - Análisis de Datos con Pandas
 - Visualización de Datos
-- Machine Learning para Detección 
-- Automatización Ofensiva
-- Datasets Reales de Seguridad
-- Hacking ético
+- Machine Learning para Detección de amenazas
+- Automatización ofensiva
+- Parsing de logs de seguridad
+- Fundamentos de Hacking ético
 
 ---
 
-## Tecnologías
+## Stack Tecnológico
 
-- Python 3.x
+- Python 3.11+
 - Pandas, NumPy
 - Matplotlib, Seaborn, Plotly
 - Scikit-Learn
 - Jupyter Notebook
 - Nmap, Tshark
-- Git y GitHub
+- Git & GitHub
 
 ---
 
+## Requisitos
+
+- Python **>= 3.11.8**
+- pip
+- Virtualenv / venv
+- Git
+
+
 ## Estructura General del Repositorio
 
-- docs/ -> Documentación conceptual
-- projects/ -> Código real
-- shared/ -> Utilidades reutilizables 
+- docs/ -> Documentación conceptual y metodológica
+- projects/ -> Implementaciones de proyectos independientes
+- shared/ -> Utilidades reutilizables (si aplica)
+
+---
+
+## Cómo ejecutar los proyectos 
+
+Este repositorio está organizado como un **monorepo**, que contiene
+múltiples proyectos independientes y autocontenidos.
+
+Cada proyecto debe ejecutarse desde su propio directorio dentro de la 
+carpeta `projects/`.
+
+### Ejemplo: Proyecto 1 - Análisis de Logs 
+
+``bash
+cd projects/project1-log-analysis
+python -m src.load_data
 
 ---
 

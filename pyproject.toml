@@ -1,0 +1,10 @@
+[project]
+name = "ai-cybersec-datapipeline"
+version = "0.1.0"
+description = "AI, Data Analysis and Offensive Cybersecurity portfolio"
+readme = "README.md"
+requires-python = ">=3.11.8"
+
+[tool.setuptools]
+packages = []
+
