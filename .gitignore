@@ -2,8 +2,8 @@
 # VIRTUAL ENVIRONMENTS AND PYTHON CACHE / ENTORNOS VIRTUALES Y PYTHON CACHE
 ###########################################################################
 
-
 venv/
+.venv/
 .env/
 .envrc
 __pycache__/
