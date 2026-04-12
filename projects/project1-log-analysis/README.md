@@ -105,6 +105,7 @@ All commands must be executed from the project root:
 ~~~bash
 projects/project1-log-analysis
 ~~~
+
 ---
 
 ## Environment setup
@@ -152,3 +153,167 @@ pytest
 
 > This will automatically discover and execute all tests under the tests/ directory.
 
+---
+
+## Makefile Usage
+
+This project includes a `Makefile` to manage the development environment
+and common tasks.
+
+All commands must be executed from the project root:
+
+
+~~~bash
+cd projects/project1-log-analysis
+~~~
+
+
+### Available Commands 
+
+#### 🔹 Setup environment
+
+~~~bash
+make venv
+make activate
+make install
+~~~
+
+Creates and activate a virtual environment, and installs dependencies.
+
+---
+
+~~~bash
+make check
+~~~
+
+Validate environment
+
+---
+
+~~~bash
+make freeze
+~~~
+
+Generates a snapshot of all installed dependencies and save them to:
+
+~~~text
+requirements/lock.txt
+~~~
+
+This is useful for:
+
+Reproducibility of the environment, debugging dependency issues, and 
+tracking exact package versions used in the project.
+
+Note: This file should not replace the main requirements files,
+but complemented them as a locked reference.
+
+#### 🔹 Run data loading
+
+~~~bash
+make load
+~~~
+
+> ⚠️ Executes the data ingestion module. Planned command (not yet 
+available in Makefile)
+
+---
+
+#### 🔹 Run preprocessing
+
+~~~bash
+make preprocess
+~~~
+
+> ⚠️ Not yet implemented (planned module)
+
+---
+
+#### 🔹 Run pattern detection
+
+~~~bash
+make detect
+~~~
+
+> ⚠️ Not yet implemented (planned module)
+
+---
+
+#### 🔹 Run full pipeline 
+
+~~~bash
+make all
+~~~
+
+Run the complete pipeline:
+
+1. Load data  ✅ 
+2. Preprocess logs  🔜
+3. Detect attack patterns  🔜
+
+> ⚠️ Not yet implemented (planned module)
+
+---
+
+#### 🔹 List installed packages
+
+~~~bash
+make list
+~~~
+
+View installed packages in the current virtual environment.
+
+---
+
+#### 🔹 Run tests
+
+~~~bash
+make test
+~~~
+
+Executes all unit tests using pytest.
+
+---
+
+#### 🔹 Launch Jupyter Notebook
+
+~~~bash
+make notebook
+~~~
+
+---
+
+#### 🔹 Register kernel
+
+~~~bash
+make kernel
+~~~
+
+This allows to select the project environment inside Jupyter
+Notebook or JupyterLab in order to ensure the correct dependencies
+and interpreter are being used. 
+
+#### 🔹 Clean environment 
+
+~~~bash
+make clean
+~~~
+
+Removes temporary files, caches, and artifacts.
+
+---
+
+## Pipeline Overview
+
+The project follows a modular pipeline design:
+
+~~~text
+load_data → preprocess → detect_patterns → visualize
+~~~
+
+Each step is independently executable but can also be chained 
+using `make all`.
+
+> ⚠️ Not yet implemented (planned module)
+
+---
