@@ -6,7 +6,10 @@ def process_auth(match):
 
     status = "failed" if "Failed" in data["event"] else "success"
 
-    ip_obj = ipaddress.ip_address(data["ip"])
+    try:
+        ip_obj = ipaddress.ip_address(data["ip"])
+    except ValueError:
+        return None
     
     # Add 4 couples "key:value" in order to be turn into new columns in return dataframe.
     data["status"] = status        
