@@ -36,7 +36,7 @@ security log simulations designed to mimic:
 ## Data Notice
 
 Public IP addresses appearing in the logs are randomly used
-for simulation realism and do not imply real malicious activity.        
+for simulation realism and do not imply real malicious activity.
 
 ---
 
@@ -45,6 +45,7 @@ for simulation realism and do not imply real malicious activity.
 ~~~text
 
 project1-log-analysis/
+├── Makefile
 ├── README.md
 ├── data/                          # Raw and processed datasets
 │   ├── processed/
@@ -61,39 +62,49 @@ project1-log-analysis/
 │       ├── ssh_bruteforce.log
 │       └── web_access.log
 ├── notebooks/                     # Exploratory and analysis notebooks
-│   ├── 01_exploratory_analysis.ipynb
-│   ├── 02_preprocessing_analysis.ipynb
-│   ├── 03_visualization_analysis.ipynb
+│   └── 01_exploratory_analysis.ipynb
 ├── pyproject.toml
 ├── reports/
 │   └── figures
-        └── README.md
-├── requirements.txt
+│       └── README.md
+├── requirements/
+│   ├── base.txt
+│   ├── dev.txt
+│   ├── legacy.txt
+│   ├── lock.txt
+│   ├── notebook.txt
+│   └── viz.txt
 ├── src/                           # Core data ingestion and preprocessing logic
 │   ├── __init__.py
 │   ├── detect_patterns.py
 │   ├── load_data.py               # Data loading utilities
-│   ├── preprocess.py              # Log parsing and cleaning 
+│   ├── preprocess/                # Log parsing and cleaning
+│   │   ├── __init__.py
+│   │   ├── general_processor.py
+│   │   ├── main_function.py
+│   │   ├── parsers.py
+│   │   └── specific_processor.py
 │   └── visualize.py               # Exploratory analysis and visualization
-└── tests/                         
-    ├── __init__.py                # Unit tests for ingestion and preprocessing
-    ├── test_detect_patterns.py
-    ├── test_preprocess.py
-    └── load_data/                  # Load data tests 
-        ├── __init__.py
-        ├── test_load_csv.py
-        ├── test_load_invalid.py
-        ├── test_load_log.py
-        └── test_load_NotSupportedFile.py
+└── tests/                         # Unit tests for ingestion and preprocessing
+    ├── load_data/                  # Load data tests
+    │    ├── test_load_csv.py
+    │    ├── test_load_invalid.py
+    │    ├── test_load_log.py
+    │    └── test_load_NonSupportedFile.py
+    ├── preprocess/                  # Preprocess tests
+    │    ├── test_preprocess_basic.py
+    │    ├── test_preprocess_invalid.py
+    │    └── test_preprocess_ip.py
+    └── test_detect_patterns.py     # Placeholder: implementation pending.
 ~~~
 
 ---
 
 ## Current Status
 
-✔ Module 1: Data Loading (completed)
-🔜 Module 2: Preprocessing (next)
-⬜ Module 3: Pattern Detection (Planned)
+✔  Module 1: Data Loading (completed)
+✔  Module 2: Preprocessing (completed)
+🔜 Module 3: Pattern Detection (next)
 ⬜ Module 4: Visualization (Planned)
 
 ---
@@ -110,11 +121,16 @@ projects/project1-log-analysis
 
 ## Environment setup
 
-~~~
+~~~bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements/base.txt
+python -m pip install -r requirements/dev.txt
+python -m pip install -r requirements/viz.txt
+python -m pip install -r requirements/notebook.txt
 ~~~
+
+For convenience, these steps can also be performed using the Makefile commands described below.
 
 ---
 
@@ -174,7 +190,7 @@ cd projects/project1-log-analysis
 
 ~~~bash
 make venv
-make activate
+source .venv/bin/activate
 make install
 ~~~
 
@@ -194,7 +210,7 @@ Validate environment
 make freeze
 ~~~
 
-Generates a snapshot of all installed dependencies and save them to:
+Saves a snapshot of installed package versions to
 
 ~~~text
 requirements/lock.txt
@@ -205,53 +221,8 @@ This is useful for:
 Reproducibility of the environment, debugging dependency issues, and 
 tracking exact package versions used in the project.
 
-Note: This file should not replace the main requirements files,
-but complemented them as a locked reference.
-
-#### 🔹 Run data loading
-
-~~~bash
-make load
-~~~
-
-> ⚠️ Executes the data ingestion module. Planned command (not yet 
-available in Makefile)
-
----
-
-#### 🔹 Run preprocessing
-
-~~~bash
-make preprocess
-~~~
-
-> ⚠️ Not yet implemented (planned module)
-
----
-
-#### 🔹 Run pattern detection
-
-~~~bash
-make detect
-~~~
-
-> ⚠️ Not yet implemented (planned module)
-
----
-
-#### 🔹 Run full pipeline 
-
-~~~bash
-make all
-~~~
-
-Run the complete pipeline:
-
-1. Load data  ✅ 
-2. Preprocess logs  🔜
-3. Detect attack patterns  🔜
-
-> ⚠️ Not yet implemented (planned module)
+Note: This file complements the dependency specification files;
+it does not replace them.
 
 ---
 
@@ -291,15 +262,64 @@ make kernel
 
 This allows to select the project environment inside Jupyter
 Notebook or JupyterLab in order to ensure the correct dependencies
-and interpreter are being used. 
+and interpreter are being used.
 
-#### 🔹 Clean environment 
+#### 🔹 Clean environment
 
 ~~~bash
 make clean
 ~~~
 
-Removes temporary files, caches, and artifacts.
+Removes the project's virtual environment.
+
+---
+
+
+## Planned Commands
+
+#### 🔹 Run data loading
+
+~~~bash
+make load
+~~~
+
+> ⚠️  Planned command for data ingestion; not yet available in Makefile.
+
+---
+
+#### 🔹 Run preprocessing
+
+~~~bash
+make preprocess
+~~~
+
+> ⚠️ Not yet implemented (planned module)
+
+---
+
+#### 🔹 Run pattern detection
+
+~~~bash
+make detect
+~~~
+
+> ⚠️ Not yet implemented (planned module)
+
+---
+
+#### 🔹 Run full pipeline
+
+~~~bash
+make all
+~~~
+
+Run the complete pipeline:
+
+1. Load data  ✅
+2. Preprocess logs  ✅
+3. Detect attack patterns  🔜
+
+> ⚠️ Not yet implemented (planned module)
 
 ---
 

@@ -7,11 +7,6 @@ venv:
 	python -m venv .venv
 
 
-# Activar entorno 
-activate:
-	source .venv/bin/activate
-
-
 # Instalar todo
 install:
 	$(PYTHON) -m pip install --upgrade pip
@@ -27,7 +22,7 @@ check:
 	$(PYTHON) -m pytest
 
 
-# Freeze controlado
+# Guardar una captura de las dependencias instaladas
 freeze: 
 	$(PYTHON) -m pip freeze > requirements/lock.txt
 
@@ -54,7 +49,7 @@ kernel:
 	$(PYTHON) -m ipykernel install --user --name=project1-env
 
 
-# Limpiar entorno
+# Elimina el entorno virtual del proyecto
 clean:
 	rm -rf .venv
 	
