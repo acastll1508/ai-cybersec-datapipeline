@@ -6,7 +6,7 @@ from src.preprocess.main_function import preprocess_log
 
 
 def test_preprocess_ignores_invalid_lines():
-    
+
     lines = [
         "random noise log",
         "another invalid line"
