@@ -10,12 +10,12 @@ def process_auth(match):
         ip_obj = ipaddress.ip_address(data["ip"])
     except ValueError:
         return None
-    
+
     # Add 4 couples "key:value" in order to be turn into new columns in return dataframe.
-    data["status"] = status        
+    data["status"] = status
     data["ip_int"] = int(ip_obj)
-    data["is_private"] = ip_obj.is_private 
+    data["is_private"] = ip_obj.is_private
     data["ip_version"] = ip_obj.version
-    
+
 
     return data

@@ -23,7 +23,7 @@ check:
 
 
 # Guardar una captura de las dependencias instaladas
-freeze: 
+freeze:
 	$(PYTHON) -m pip freeze > requirements/lock.txt
 
 
@@ -52,5 +52,3 @@ kernel:
 # Elimina el entorno virtual del proyecto
 clean:
 	rm -rf .venv
-	
-

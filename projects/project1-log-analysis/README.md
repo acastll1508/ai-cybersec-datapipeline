@@ -1,7 +1,7 @@
-# Project 1 - Cyberattack Log Analysis 
+# Project 1 - Cyberattack Log Analysis
 
-This project focuses on the analysis and visualization of real-world 
-cyberattack logs in order to identify malicious patterns, attacker behavior 
+This project focuses on the analysis and visualization of real-world
+cyberattack logs in order to identify malicious patterns, attacker behavior
 and temporal trends.
 
 It is the first project of the **AI & Data Analytics for Offensive Cybersecurity**
@@ -13,7 +13,7 @@ portfolio and serves as a foundation for later Machine Learning-based detection.
 
 - Analyze authentication and network logs related to cyberattacks
 - Identify malicious IP addresses and attack patterns
-- Perform temporal analysis of attack activity 
+- Perform temporal analysis of attack activity
 - Build a clean and reproducible data analysis pipeline
 - Apply data analysis skills in a cybersecurity context
 
@@ -26,9 +26,9 @@ security log simulations designed to mimic:
 
 - Linux SSH authentication logs (e.g. `auth.log`)
 - Brute-force attack traces from honeypots
-- Firewall or web server logs (future extensions) 
+- Firewall or web server logs (future extensions)
 
-> They do not contain real user data and are intended 
+> They do not contain real user data and are intended
   for educational and analytical purposes only.
 
 ---
@@ -134,7 +134,7 @@ For convenience, these steps can also be performed using the Makefile commands d
 
 ---
 
-## Example execution 
+## Example execution
 
 ~~~
 python -m src.load_data
@@ -147,10 +147,10 @@ pipeline works correctly.
 
 ## Testing Strategy
 
-Initial testing was performed using manual execution of test scripts to validate 
+Initial testing was performed using manual execution of test scripts to validate
 data ingestion and preprocessing logic.
 
-Once the behavior was validated, all tests were migrated to an automated 
+Once the behavior was validated, all tests were migrated to an automated
 pytest-based testing suite to ensure reproducibility and maintainability.
 
 ---
@@ -164,7 +164,7 @@ From the project root:
 ~~~bash
 cd projects/project1-log-analysis
 source .venv/bin/activate
-pytest 
+pytest
 ~~~
 
 > This will automatically discover and execute all tests under the tests/ directory.
@@ -184,7 +184,7 @@ cd projects/project1-log-analysis
 ~~~
 
 
-### Available Commands 
+### Available Commands
 
 #### 🔹 Setup environment
 
@@ -218,7 +218,7 @@ requirements/lock.txt
 
 This is useful for:
 
-Reproducibility of the environment, debugging dependency issues, and 
+Reproducibility of the environment, debugging dependency issues, and
 tracking exact package versions used in the project.
 
 Note: This file complements the dependency specification files;
@@ -331,7 +331,7 @@ The project follows a modular pipeline design:
 load_data → preprocess → detect_patterns → visualize
 ~~~
 
-Each step is independently executable but can also be chained 
+Each step is independently executable but can also be chained
 using `make all`.
 
 > ⚠️ Not yet implemented (planned module)

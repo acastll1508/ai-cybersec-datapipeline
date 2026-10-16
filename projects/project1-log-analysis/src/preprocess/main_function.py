@@ -11,7 +11,5 @@ def preprocess_log(lines):
         if parsed:
             records.append(parsed)
 
-        
+
     return pd.DataFrame(records)
-
-

@@ -15,4 +15,3 @@ PARSERS = [
         "processor" : process_auth
     }
 ]
-
