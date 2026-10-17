@@ -309,17 +309,19 @@ make detect
 
 #### 🔹 Run full pipeline
 
+The following command is planned but not implemented yet:
+
 ~~~bash
 make all
 ~~~
 
-Run the complete pipeline:
+The planned pipeline will execute:
 
 1. Load data  ✅
 2. Preprocess logs  ✅
 3. Detect attack patterns  🔜
 
-> ⚠️ Not yet implemented (planned module)
+> ⚠️ Full pipeline orchestration is not yet implemented.
 
 ---
 
@@ -331,9 +333,7 @@ The project follows a modular pipeline design:
 load_data → preprocess → detect_patterns → visualize
 ~~~
 
-Each step is independently executable but can also be chained
-using `make all`.
-
-> ⚠️ Not yet implemented (planned module)
+Each module is developed and tested independently. Full pipeline orchestration is planned for
+a future stage.
 
 ---
