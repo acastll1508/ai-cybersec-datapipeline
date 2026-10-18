@@ -2,5 +2,7 @@
 __pycache__/
 *.pyc
 .env
+*.png
 .ipynb_checkpoints/
+Untitled.ipynb
 data/processed/
