@@ -1,0 +1,1 @@
+from src.detect_patterns.main_function import detect_bruteforce
