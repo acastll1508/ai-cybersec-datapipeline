@@ -27,10 +27,16 @@ def validate_parameters(
         raise ValueError("window_minutes must be a positive integer")
 
 
-def validate_columns(df: pd.DataFrame) -> None:
+def validate_columns(
+        df: pd.DataFrame,
+        required_columns: set[str] | None = None
+) -> None:
     """Validate the required Dataframe columns."""
 
-    missing_columns = REQUIRED_COLUMNS - set(df.columns)
+    if required_columns is None:
+        required_columns = REQUIRED_COLUMNS
+
+    missing_columns = required_columns - set(df.columns)
 
     if missing_columns:
         raise ValueError(
