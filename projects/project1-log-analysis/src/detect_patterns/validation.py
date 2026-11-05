@@ -28,8 +28,8 @@ def validate_parameters(
 
 
 def validate_columns(
-        df: pd.DataFrame,
-        required_columns: set[str] | None = None
+    df: pd.DataFrame,
+    required_columns: set[str] | None = None,
 ) -> None:
     """Validate the required Dataframe columns."""
 

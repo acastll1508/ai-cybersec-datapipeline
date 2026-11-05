@@ -8,6 +8,9 @@ from src.detect_patterns.validation import (
 from src.detect_patterns.success_after_failures import (
     detect_success_after_failures as _detect_success_after_failures
 )
+from src.detect_patterns.multiple_users import (
+    detect_multiple_users as _detect_multiple_users,
+)
 
 
 def detect_bruteforce(
@@ -30,11 +33,11 @@ def detect_bruteforce(
 def detect_success_after_failures(
     df: pd.DataFrame,
     threshold: int = 3,
-    window_minutes: int = 5
+    window_minutes: int = 5,
 ) -> pd.DataFrame:
     """Detect successful logins preceded by repeated failures."""
 
-    validate_parameters(threshold,window_minutes)
+    validate_parameters(threshold, window_minutes)
     validate_columns(
         df,
         required_columns={"timestamp", "ip", "status", "user"},
@@ -43,5 +46,25 @@ def detect_success_after_failures(
     return _detect_success_after_failures(
         df,
         threshold=threshold,
-        window_minutes=window_minutes
+        window_minutes=window_minutes,
+    )
+
+
+def detect_multiple_users(
+    df: pd.DataFrame,
+    threshold: int = 5,
+    window_minutes: int = 5,
+) -> pd.DataFrame:
+    """Detect one IP attempting authentication against multiple users."""
+
+    validate_parameters(threshold, window_minutes)
+    validate_columns(
+        df,
+        required_columns={"timestamp", "ip", "status", "user"},
+    )
+
+    return _detect_multiple_users(
+        df,
+        threshold=threshold,
+        window_minutes=window_minutes,
     )

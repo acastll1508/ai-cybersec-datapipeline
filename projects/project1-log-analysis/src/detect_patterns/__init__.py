@@ -1,2 +1,3 @@
 from src.detect_patterns.main_function import detect_bruteforce
 from src.detect_patterns.main_function import detect_success_after_failures
+from src.detect_patterns.main_function import detect_multiple_users
