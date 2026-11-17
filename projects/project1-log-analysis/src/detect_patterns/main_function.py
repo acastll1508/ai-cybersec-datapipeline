@@ -11,6 +11,9 @@ from src.detect_patterns.success_after_failures import (
 from src.detect_patterns.multiple_users import (
     detect_multiple_users as _detect_multiple_users,
 )
+from src.detect_patterns.event_frequency import (
+    detect_event_frequency as _detect_event_frequency,
+)
 
 
 def detect_bruteforce(
@@ -64,6 +67,23 @@ def detect_multiple_users(
     )
 
     return _detect_multiple_users(
+        df,
+        threshold=threshold,
+        window_minutes=window_minutes,
+    )
+
+
+def detect_event_frequency(
+    df: pd.DataFrame,
+    threshold: int = 21,
+    window_minutes: int = 1,
+) -> pd.DataFrame:
+    """Detect unusually high authentication event frequency from a single IP."""
+
+    validate_parameters(threshold, window_minutes)
+    validate_columns(df)
+
+    return _detect_event_frequency(
         df,
         threshold=threshold,
         window_minutes=window_minutes,
